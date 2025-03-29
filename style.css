@@ -1,0 +1,589 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+
+}
+
+.navbar {
+    background: #131313;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+}
+
+.navbar__container{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0, auto;
+    padding: 0 50px;
+    white-space: nowrap;
+
+}
+
+#navbar__logo{
+    display: flex; /* Aligns logo within navbar */
+    align-items: center; /* Centers vertically */
+    justify-content: flex-start;
+    height: 100%; /* Ensures it stays within the navbar */
+}
+#navbar__logo-img {
+    height: 70px; /* Adjust this value as needed */
+    width: auto; /* Maintains original aspect ratio */
+    max-height: 80%; /* Prevents overshooting */
+}
+
+.fa.gem {
+    margin-right: 0.5rem;
+
+}
+
+.navbar__menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    overflow: hidden;
+
+}
+
+.navbar__item{
+    height: 80px;
+
+}
+
+.navbar__links{
+    color: #ffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+
+}
+
+.navbar__btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+
+}
+
+/* button CSS */ /* color is : #74C365 */
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px; /* Compact size */
+    border: none;
+    outline: none;
+    border-radius: 50px; /* Pill shape */
+    background: #74C365; /* Solid green */
+    color: white;
+    font-size: 14px; /* Smaller text */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out, box-shadow 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    user-select: none; /* Prevents text selection */
+    min-width: 120px; /* Ensures a reasonable width */
+}
+
+.button:hover {
+    background-color: #66B357; /* Slightly darker green on hover */
+    transform: translateY(-1px); /* Subtle lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Softer shadow */
+}
+
+/* Click animation */
+.button:active {
+    transform: scale(0.95); /* Click effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: scale(0.95); /* Slight shrink effect */
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.2); /* Inner shadow for recessed effect */
+}
+
+
+
+.navbar__links{
+    color: #74C365; /* Change color to #74C365 */
+    transition: color 0.1s ease-in; /* Smooth ease-in transition */
+
+}
+.navbar__links:hover {
+    color: #4F8B41; /* Slightly darker green on hover */
+}
+
+
+
+/* mobile view and menu toggle */
+
+
+@media screen and (max-width: 960px) {
+    .navbar__container{
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+
+    .navbar__menu{
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 0;
+        transition: all 0.5s ease;
+        height: 50vh;
+        z-index: -1;
+        background: #131313;
+    }
+    
+    .navbar__menu.active {
+        
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 50vh;
+        font-size: 1.6rem;
+
+    }
+
+    #navbar__logo{
+        padding-left: 25px;
+    }
+
+    .navbar__toggle .bar{
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #ffff;
+
+    }
+
+    .navbar__item{
+        width: 100%;
+
+    }
+
+    .navbar__links{
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    #mobile-menu{
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+
+    }
+
+    .navbar__btn{
+        padding-bottom: 2rem;
+    }
+
+    .button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80px;
+        margin: 0;
+    }
+
+    .navbar__toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+
+}
+
+
+
+/* hero section CSS */
+
+.main{
+    background-color: #141414;
+    height: auto;
+}
+
+.main__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+    height: 90vh;
+    background-color: #141414;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+}
+
+.main__content h1{
+    font-family: "Roboto Mono", monospace ;
+    font-size: 48px;
+    background-color: #74C365;
+    font-weight: 900;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+
+    padding-bottom: 32px;
+}
+
+.main__content h2{
+    font-family: "PT Sans", sans-serif;
+    font-size: 24px;
+    background-color: #ffffff;
+    font-weight: 500;
+    font-style: italic;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+
+    padding-bottom: 32px;
+}
+
+.main__content p{
+    font-family: "PT Sans", sans-serif;
+    font-size: 22px;
+    background-color: #ffffff;
+    font-weight: 300;
+    font-style: normal;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.main__img--container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#main__img {
+    width: 85%;
+    max-width: 500px;
+    height: auto;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: #141414; /* Match your site's background */
+}
+
+
+
+/* Minimalist CSS for Cards */
+.cards {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #141414;
+}
+
+.cards h2 {
+    font-family: "Roboto Mono", monospace;
+    color: #74C365;
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 80px;
+}
+
+.cards__container {
+    display: flex;
+    justify-content: center;
+    gap: 84px;
+    flex-wrap: wrap;
+    margin-top: auto;
+    margin-bottom: 160px;
+}
+
+.card {
+    background: #3a3a3a;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card h3 {
+    font-family: "Roboto Mono", monospace;
+    font-style: italic;
+    font-size: 18px;
+    margin: 15px;
+    color: #74C365;
+}
+
+.card p {
+    font-family: "PT Sans", sans-serif;
+    font-size: 14px;
+    margin: 0 15px 15px;
+    color: #ffffff;
+}
+
+.card__btn {
+    display: block;
+    width: max-content;
+    margin: 0 15px 15px;
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #74C365;
+    text-decoration: none;
+    border: 1px solid #74C365;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+}
+
+.card__btn:hover {
+    background: #74C365;
+    color: white;
+}
+.card__btn:active {
+    transform: scale(0.95);
+}
+
+/*cybersecurity practices section*/
+
+.cybersecurity-practices {
+    
+    font-family: "Roboto Mono", monospace;
+    font-size: 40px auto;
+    font-weight: 800;
+    text-align: left;
+    padding: 40px 20px;
+    background: #141414;
+    color: #fff;
+    max-width: 1300px;
+    margin: auto;
+    margin-bottom: 80px;
+}
+
+.cybersecurity-practices h2 {
+
+    font-family: "Roboto Mono", monospace;
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: #74C365;
+    text-align: center;
+}
+
+.practices-list {
+    list-style-type: disc;
+    padding: 20px;
+}
+
+.practices-list li {
+    font-family: "Roboto Mono", monospace;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 20px;
+    padding: 12px 0;
+    border-bottom: 1px solid #444;
+    line-height: 2.5;
+}
+
+.practices-list li:last-child {
+    border-bottom: none;
+}
+
+.learn-more {
+    color: #74C365;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 5px;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.learn-more-btn {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #121212
+    background-color: #f8d210;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease;
+}
+
+.learn-more-btn:hover {
+    background-color: #74C365; /* Green shade */
+    box-shadow: 0 4px 10px rgba(116, 195, 101, 0.4); /* Smooth shadow effect */
+}
+
+/* Click effect */
+.learn-more-btn:active {
+    transform: scale(0.95); /* Slight press-in effect */
+    box-shadow: 0 2px 5px rgba(116, 195, 101, 0.3); /* Reduce shadow on click */
+}
+
+
+
+
+/* Footer Styles */
+.footer {
+    background-color: #121212;
+    color: #ffffff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: Arial, sans-serif;
+}
+
+.footer__container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer__cybersecurity {
+    max-width: 800px;
+}
+
+.footer__cybersecurity h3 {
+    font-family: "Roboto Mono", monospace;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.footer__cybersecurity p {
+    font-family: "PT Sans", sans-serif;
+    font-size: 0.9rem;
+    color: #b0b0b0;
+}
+
+.footer__info p {
+    font-family: "PT Sans", sans-serif;
+    font-size: 0.9rem;
+    color: #b0b0b0;
+}
+
+.footer__right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+
+.footer__socials {
+    margin-top: 30px;
+}
+
+.footer__socials a {
+    margin-left: 0px;
+    display: inline-block;
+}
+
+.footer__socials img {
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.footer__socials img:hover {
+    opacity: 0.7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer__container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer__right {
+        align-items: center;
+        margin-top: 15px;
+    }
+    
+    .footer__socials a {
+        margin: 5px;
+    }
+}
+
+
+
+
+
+
+
+
