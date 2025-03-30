@@ -498,7 +498,7 @@ html, body {
     font-family: "Roboto Mono", monospace;
     font-size: 40px auto;
     font-weight: 800;
-    text-align: left;
+    text-align: center;
     padding: 40px 20px;
     background: #141414;
     color: #fff;
@@ -509,15 +509,46 @@ html, body {
 
 .cybersecurity-practices h2 {
 
+    display: inline-block;
     font-family: "Roboto Mono", monospace;
     font-size: 40px;
     font-weight: 800;
     margin-bottom: 15px;
     color: #74C365;
-    text-align: center;
+    
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    border-right: 2px solid #74C365;
+
+}
+
+.cybersecurity-practices h2.typing{
+
+    width: 100%;
+    animation: 
+        typing 3s steps(28),
+        cursor 0.4s step-end infinite alternate;
+
+}
+
+.cybersecurity-practices h2.finished{
+    border-right: none;
+    animation: none;
+}
+
+/*cursor blinking*/
+@keyframes cursor{
+    50% {border-color: transparent}
+}
+
+/*typing effect*/
+@keyframes typing{
+    from {width:0}
 }
 
 .practices-list {
+    text-align: left;
     list-style-type: disc;
     padding: 20px;
 }
