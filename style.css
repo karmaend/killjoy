@@ -407,7 +407,7 @@ html, body {
 .cards h2.typing{
     width: 100%;
     animation: 
-        typing 3s steps(33),
+        typing 4s steps(33),
         cursor 0.4s step-end infinite alternate;
 }
 
@@ -527,7 +527,7 @@ html, body {
 
     width: 100%;
     animation: 
-        typing 3s steps(28),
+        typing 3.2s steps(28),
         cursor 0.4s step-end infinite alternate;
 
 }

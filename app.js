@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     // Remove cursor blinking after animation completes (3s)
                     setTimeout(() => {
                         h2Element.classList.add("finished"); // Stops blinking cursor
-                    }, 1700); // Matches typing duration
+                    }, 2200); // Matches typing duration
                     
                     observer.unobserve(h2Element); // Stop observing after triggering
                 }
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     // Remove cursor blinking after animation completes (3s)
                     setTimeout(() => {
                         h2Element.classList.add("finished"); // Stops blinking cursor
-                    }, 1700); // Matches typing duration
+                    }, 2000); // Matches typing duration
                     
                     observer.unobserve(h2Element); // Stop observing after triggering
                 }
