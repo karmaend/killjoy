@@ -239,11 +239,10 @@
 
 }
 
-
-
 /* hero section CSS */
 
 .main{
+    position: relative;
     background-color: #141414;
     height: auto;
 }
