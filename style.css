@@ -572,6 +572,7 @@ html, body {
     font-weight: bold;
     margin-left: 5px;
     transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    padding: 5px 5px;
 }
 
 .learn-more-btn {
@@ -589,7 +590,7 @@ html, body {
     transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease;
 }
 
-.learn-more-btn:hover {
+.learn-more:hover {
     background-color: #74C365; /* Green shade */
     box-shadow: 0 4px 10px rgba(116, 195, 101, 0.4); /* Smooth shadow effect */
 }
@@ -654,7 +655,7 @@ html, body {
 
 
 .footer__socials {
-    margin-top: 30px;
+    margin-top: 15px;
 }
 
 .footer__socials a {
