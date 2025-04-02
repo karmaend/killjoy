@@ -546,10 +546,14 @@ html, body {
     from {width:0}
 }
 
+/* practices list section*/
+
 .practices-list {
     text-align: left;
     list-style-type: disc;
     padding: 20px;
+    max-width: 90%;
+    margin: auto;
 }
 
 .practices-list li {
@@ -601,6 +605,51 @@ html, body {
     box-shadow: 0 2px 5px rgba(116, 195, 101, 0.3); /* Reduce shadow on click */
 }
 
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .cards h2, .cybersecurity-practices h2 {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .practices-list {
+        font-size: 0.9rem;
+    }
+
+    .learn-more-btn {
+        padding: 10px 14px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cards__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 95%;
+    }
+
+    .cybersecurity-practices h2 {
+        font-size: 1.3rem;
+    }
+
+    .practices-list {
+        font-size: 0.85rem;
+        padding: 15px;
+    }
+
+    .learn-more-btn {
+        font-size: 0.85rem;
+        padding: 8px 12px;
+    }
+}
 
 
 
