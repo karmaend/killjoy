@@ -431,7 +431,7 @@ html, body {
     gap: 84px;
     flex-wrap: wrap;
     margin-top: auto;
-    margin-bottom: 160px;
+    margin-bottom: 100px;
 }
 
 .card {
@@ -490,6 +490,46 @@ html, body {
     transform: scale(0.95);
 }
 
+/*marquee section*/
+
+.marquee-container {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    height: 50px;
+    white-space: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    background: #141414;
+    padding: 10px 10px;
+    position: relative;
+}
+
+.marquee-text {
+    font-family: "Roboto Mono", monospace;
+    font-style: italic;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #74C365;
+    position: absolute;
+    min-width: 100vw; /* Ensure text starts fully outside from right */
+    animation: marquee 30s linear infinite;
+
+    text-shadow: 0 0 3px #74C365, 0 0 10px rgba(116, 195, 101, 0.1);
+}
+
+/* Perfect Right Entry & Left Exit */
+@keyframes marquee {
+    from { transform: translateX(100vw); } /* Start fully from right */
+    to { transform: translateX(-100%); } /* Move fully to left */
+}
+
+.marquee-text:hover {
+    animation-play-state: paused; /* Stops when hovered */
+}
+
+
 /*cybersecurity practices section*/
 
 .cybersecurity-practices {
@@ -514,7 +554,7 @@ html, body {
     font-weight: 800;
     margin-bottom: 15px;
     color: #74C365;
-    
+    margin-top: 80px;
     white-space: nowrap;
     overflow: hidden;
     width: 0;
