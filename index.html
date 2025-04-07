@@ -129,8 +129,6 @@
 </section>
 
     
-
-
 <!-- footer section-->
 <footer class="footer">
     <div class="footer__container">
@@ -155,9 +153,32 @@
     </div>
 </footer>
 
+<!--bullshit ass fucking retard integration because i'm an idiot-->
 
- 
+    <!-- Botpress Chat Integration -->
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+
+    <script>
+    window.botpressWebChat.init({
+        composerPlaceholder: "Ask me anything about cybersecurity!",
+        botConversationDescription: "Cybersecurity Bot at your service",
+        botId: "7d50d99f-5bb5-469e-8009-61094a4ab817",
+        hostUrl: "https://cdn.botpress.cloud/webchat/v2",
+        clientId: "7d50d99f-5bb5-469e-8009-61094a4ab817",
+        lazyLoad: false,
+        themeName: "prism",
+        theme: "light",
+        useSessionStorage: true,
+        showCloseButton: true,
+        enableReset: true
+    });
+    </script>
+
+    
     <script src="app.js"></script>
     <script src="event_tracker.js"></script>
+
+  
+
 </body>
 </html>

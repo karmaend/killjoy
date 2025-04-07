@@ -785,3 +785,7 @@ html, body {
         margin: 5px;
     }
 }
+
+iframe[src*="botpress.cloud"] {
+    z-index: 99999 !important;
+  }
