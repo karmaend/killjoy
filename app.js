@@ -68,24 +68,3 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(h2Element);
 });
 
-/*bot js
-
-window.botpress.init({
-    "botId": "7d50d99f-5bb5-469e-8009-61094a4ab817",
-    "configuration": {
-      "website": {},
-      "email": {},
-      "phone": {},
-      "termsOfService": {},
-      "privacyPolicy": {},
-      "color": "#74C365",
-      "variant": "solid",
-      "themeMode": "dark",
-      "fontFamily": "fira",
-      "radius": 0.5,
-      "additionalStylesheetUrl": "https://files.bpcontent.cloud/2025/04/07/13/20250407132259-KZVXEBCR.css"
-    },
-    "clientId": "738e91b2-ff01-462f-a5b5-d851563037eb"
-  });
-
-*/
