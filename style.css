@@ -26,7 +26,7 @@
     z-index: 1;
     width: 100%;
     max-width: 1300px;
-    margin: 0, auto;
+    margin: 0 auto;
     padding: 0 50px;
     white-space: nowrap;
 
@@ -387,8 +387,20 @@ html, body {
     background-color: #141414;
 }
 
-.cards h2{
+.cards h2 {
+
     display: inline-block;
+    font-family: "Roboto Mono", monospace;
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: #74C365;
+    margin-top: 80px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    border-right: 2px solid #74C365;
+
 }
 
 .cards h2 {
