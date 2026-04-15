@@ -3,11 +3,11 @@ Killjoy is a curated cybersecurity information hub designed to simplify complex 
 https://karmaend.github.io/killjoy/
 
 # Features
-– Well-organized cybersecurity topics
-– Concept-driven explanations
-– Static website for easy access
-– Lightweight and fast
-– Beginner to intermediate friendly
+1. Well-organized cybersecurity topics
+2. Concept-driven explanations
+3. Static website for easy access
+4. Lightweight and fast
+5. Beginner to intermediate friendly
 
 # Tech Stack
 1. HTML5
